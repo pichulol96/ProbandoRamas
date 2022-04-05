@@ -1,0 +1,11 @@
+img{
+    width: 150px;
+    border-radius: 10px;
+}
+hr{
+    padding: 1px;
+    color:rgb(0, 0, 0);
+}
+.shadow{
+    height: 400px;
+}

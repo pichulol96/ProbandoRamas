@@ -1,0 +1,10 @@
+.navbar{
+    padding:20px;
+    margin-bottom: 20px;
+    background-image: url("https://cdn.pixabay.com/photo/2021/02/22/07/11/red-6039136_960_720.png");
+}
+.btn{
+  width: 100px;
+  border-radius: 5px;
+  
+}

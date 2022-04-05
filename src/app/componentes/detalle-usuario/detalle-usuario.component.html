@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="container">
+    <h5>Detalle de usuario</h5>
+    <div style="display: flex;">
+
+    </div>
+    <div class="row">
+        <div class="col-md-4 shadow p-3 mb-5 bg-body rounded">
+            <h5 for="">Avatar</h5><br>
+            <img [src]="avatar" alt="">
+            <hr>
+            <h5>Informacion General</h5>
+            <label for="">{{id}}</label><br>
+            <label for="">{{email}}</label><br>
+            <label for="">{{nombre}}</label><br>
+            <label for="">{{apellidos}}</label><br>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-9">
+        </div>
+        <div class="col-3 d-grid gap-2">
+           <button [routerLink]="['/usuarios']" class="btn btn-dark" type="button">
+               Regresar
+            </button> <br>
+        </div>        
+    </div>
+    
+</div>
+

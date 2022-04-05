@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row titulo">
+    <div class="col-md-6 m-0 vh-100  justify-content-center align-items-center login">
+      <img src="../../../assets/iconos/display.svg" width="36" height="36" alt="">
+      <label>Login</label>
+      <div class="text-center contenido-form container" style="width: 400px;">
+        <form class="example-form"name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()" >
+          <div class="mb-3">
+            <label for="exampleInputEmail1"  class="form-label">Correo</label>
+            <input type="email" autofocus=""formControlName="email"  class="form-control input" placeholder="Ejemplo:correo@gmail.com" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div class="validar" *ngIf='form.hasError("required","email")'>
+              *email requerido
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" formControlName="password" class="form-control" placeholder="Ejemplo:123456" id="exampleInputPassword1">
+            <div class="validar" *ngIf='form.hasError("required","password")'>
+              *contraseña requerida
+            </div>
+          </div>
+          <div class="d-grid gap-2 col-12 mx-auto">
+            <button  [disabled]="!form.valid" disabled="true" class="btn btn-dark">Enviar
+               <img *ngIf="form.valid"src="../../../assets/iconos/check-lg.svg"width="20" height="20" alt="">
+            </button>
+                     
+          </div>
+        </form> 
+      </div>     
+    </div>
+  </div>
+</div>

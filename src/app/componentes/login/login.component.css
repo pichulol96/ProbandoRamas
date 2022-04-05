@@ -1,0 +1,52 @@
+.container-fluid{
+    background-image: url("https://cdn.pixabay.com/photo/2021/02/22/07/11/red-6039136_960_720.png");
+    background-color: transparent;
+    background-size: cover; 
+    background-position: right bottom; 
+}
+/*.titulo{
+    margin-left:20px ;
+    padding: 20px;
+    height: 100%;
+}*/
+.titulo label{
+    margin-left: 10px;
+}
+.login{
+    background: white;
+}
+.contenido-form{
+    margin-top: 160px;
+    width: 90%;
+}
+input{
+    text-align: center;
+    /*margin-left: 130px;
+    width: 50%;*/
+    width: 300px;
+    margin-left: 30px;
+    padding: 10px;
+}
+button{
+  padding: 10px;
+}
+
+/*.img-fondo
+{
+    
+    background-image: url("https://www.online-image-editor.com/styles/2019/images/power_girl.png");
+    background-color: transparent;
+    background-size: cover; 
+    background-position: right bottom; 
+
+}*/
+.validar{
+    color:red;
+}
+.ng-invalid:not(form)
+{
+ border: solid 2px red;
+}
+.ng-valid:not(form){
+    border: solid 2px green;
+}
