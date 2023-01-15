@@ -7,14 +7,14 @@
         <form class="example-form"name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()" >
           <div class="mb-3">
             <label for="exampleInputEmail1"  class="form-label">Correo</label>
-            <input type="email" autofocus=""formControlName="email"  class="form-control input" placeholder="Ejemplo:correo@gmail.com" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" autofocus=""formControlName="email"  class="form-control input" placeholder="Ejemplo: correo@gmail.com" id="exampleInputEmail1" aria-describedby="emailHelp">
             <div class="validar" *ngIf='form.hasError("required","email")'>
               *email requerido
             </div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" formControlName="password" class="form-control" placeholder="Ejemplo:123456" id="exampleInputPassword1">
+            <input type="password" formControlName="password" class="form-control" placeholder="Ejemplo: 123456" id="exampleInputPassword1">
             <div class="validar" *ngIf='form.hasError("required","password")'>
               *contraseña requerida
             </div>
