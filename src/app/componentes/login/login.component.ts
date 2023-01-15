@@ -11,22 +11,24 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-    form = new FormGroup({
-    email: new FormControl('', [
+  form:FormGroup = new FormGroup({})
+  constructor(private UsuariosService:UsuariosService,private router:Router, private fb:FormBuilder) { }
+  
+  ngOnInit(): void {
+    this.form=this.fb.group({
+      email:['',[
       Validators.required,
       Validators.email
-    ]),
-    password: new FormControl('', [
-      Validators.required,
+    ]],
+    password:['',
+      [Validators.required,
       Validators.minLength(6)
-    ])
-    
-   });
-  constructor(private UsuariosService:UsuariosService,private router:Router) { }
-  ngOnInit(): void {
+    ]]
+   })
   }
   onSubmit(){
     let user = this.form.value
+    console.log(user);
     this.UsuariosService.Login(user).subscribe((resp:any)=>{
       //console.log(resp);
       //console.log(resp.token);

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
 
@@ -8,6 +9,9 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[
+        Router
+      ],
       declarations: [ HeaderComponent ]
     })
     .compileComponents();
@@ -19,7 +23,10 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('cerrar sesion', () => {
+    fixture = TestBed.createComponent(HeaderComponent);
+    component = fixture.componentInstance;
+    const cerrar= component.CerrarSesion()
+    expect(cerrar).toBeTruthy();
   });
 });

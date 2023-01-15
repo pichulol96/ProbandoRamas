@@ -15,7 +15,12 @@
               <tr *ngFor="let usuario of usuarios">
                 <th>{{usuario.id}}</th>
                 <td>{{usuario.email}}</td>
-                <td><button class="btn btn-sm btn-dark" (click)="DetalleUsuario(usuario.id,usuario.email,usuario.first_name,usuario.last_name,usuario.avatar)"><img src="../../../assets/iconos/person-lines-fill.svg" alt=""> Ver mas detalles</button></td>
+                <td><button class="btn btn-sm btn-dark" 
+                  (click)="DetalleUsuario(usuario.id,usuario.email,usuario.first_name,usuario.last_name,usuario.avatar)">
+                  <img src="../../../assets/iconos/person-lines-fill.svg" alt=""> 
+                  Ver mas detalles
+                  </button>
+                </td>
               </tr>
              
             </tbody>
